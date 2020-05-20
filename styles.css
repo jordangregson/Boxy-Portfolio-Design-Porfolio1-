@@ -1,0 +1,135 @@
+@charset "UTF-8";
+/* CSS Document */
+body
+{
+	background-color: #C2C2C2;
+}
+
+.webpage_name
+{
+	line-height: 25px;
+	font-size: 40pt;
+	font-family: Gotham, 'Helvetica Neue', Helvetica, Arial, 'sans-serif';
+	text-align: center;
+	padding-top: 1em;
+	padding-bottom: 15px;
+	line-height: 1.2;
+	position: relative;
+}
+
+.navbar {
+	display: flex;
+	margin-left: 5rem;
+	margin-right: 5rem;
+	justify-content: center;
+	max-width: 100%;
+	padding: 1em;
+	background-color: #727272;
+}
+
+.nav_item a {
+	text-decoration: none;
+	color: white;
+}
+
+.navbar li {
+	list-style: none;
+	display: inline-block;
+	margin-left: 70px;
+}
+
+.nav_item
+{
+	font-family: Gotham, 'Helvetica Neue', Helvetica, Arial, 'sans-serif';
+	font-size: 20pt;
+
+}
+
+.dropdown {
+	display: none;
+}
+
+.dropdown_toggle {
+	display: none;
+}
+
+@media (max-width: 800px) {
+	header {
+		background-color:  rgb(125, 125, 125);
+		width:100%;
+		position: fixed;
+		height: 90px;
+	}
+	.navbar {
+		display: none;
+	}
+
+	.webpage_name {
+		margin-top: 0em;
+		font-size: 22pt;
+		padding-top: 1em;
+		padding-bottom: 1em;
+		color: white;
+	}
+
+	.dropdown {
+		display: none;
+		background-color:  rgb(125, 125, 125);
+		width: 100%;
+	}
+
+	.dropdown li {
+		margin-left: 1em;
+		list-style: none;
+		font-size: 25pt;
+		font-family: Gotham, 'Helvetica Neue', Helvetica, Arial, 'sans-serif';
+		line-height: 2;
+	}
+
+	.dropdown a {
+		display: fixed;
+        margin-left: 10px;
+		text-decoration: none;
+		color: white;
+	}
+
+	.dropdown_toggle:checked ~ .dropdown {
+		display: flex;
+		}
+
+	.dropdown_toggle {
+		display: none;
+	}
+
+	.dropdown_toggle_label {
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		margin: 40px;
+		align-content: center;
+	}
+	
+	.dropdown_toggle_label span,
+	.dropdown_toggle_label span::before,
+	.dropdown_toggle_label span::after {
+		display: block;
+		background: white;
+		height: 4px;
+		width: 2em;
+		position: relative;
+	}
+
+	.dropdown_toggle_label span::before,
+	.dropdown_toggle_label span::after {
+		content: "";
+		position: absolute;
+	}
+
+	.dropdown_toggle_label span::before {
+		bottom: 10px;
+	}
+
+	.dropdown_toggle_label span::after {
+		top: 10px;
+	}
+}
